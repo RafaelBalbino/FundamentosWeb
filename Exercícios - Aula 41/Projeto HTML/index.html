@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Diz que é uma página 'html', no caso versão 5 -->
+<html lang="pt-br"> <!-- Tag principal que fecha no final, onde o idioma é português do Brasil -->
+
+<head> <!-- Informações internas para que o código funcione, colocamos 'metadados' aqui -->
+    <meta charset="UTF-8"> <!-- Metadados para reconhecer funções | 'charset' Formato do teclado-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configuração do navegador EDGE para não 
+                                                          dar erro de compatibilidade-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Deixar página responsiva à 
+                                                                           configurar a estrutura padrão -->
+    <title>Página do Dragonite</title> <!--  Título da página -->
+
+    <!-- Se ficar amarelo, é um alerta, não erro. Acontece pq não terminamos ainda a configuração -->
+    <style>
+        h1{
+            color: brown;
+            margin-bottom: 20px;
+        }
+    </style>
+    <!-- .text significa classe e #text significa id, o terceiro método de estilizar por classe -->
+
+    <!-- Necessário para especificar o caminho da classe estilizadora '.css'-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body> <!-- Corpo da página. Tudo feito aqui é visível para o usuário -->
+    <nav> <!-- Menuzinho | Tag Semântica (Arruma código) 
+            Barra de navegação (normalmente onde você coloca os links) -->
+        <div>
+            <h2>Menu</h2>
+        </div>
+        <div>
+        <ul> <!-- Lista não-ordenada | <ol> é ordenada por números -->
+            
+            <a class="textmenu" href="skate.html">
+                <li>Vídeo Fofolete</li> <!-- Linha da lista -->
+            </a>
+
+            <a href="contatos.html">
+                <li>Fale comigo</li> <!-- Linha da lista -->
+            </a>
+        </ul>
+       </div>
+    </nav>
+
+        <h1 style="color:brown ; font-family:'Courier New', Courier, monospace">
+        O Dragão Carteiro</h1> <!-- Texto maior e vai até o h6, que é pequeno-->
+
+        <div class="container">
+            <div class="text">
+                <h2 class="h2Index">Descrição do Dragonite</h2>
+
+            <!-- Chamando a classe 'text' que criamos lá em cima pra aí sim mudar ela -->
+            <p class="text" id="idteste">Vemos abaixo um dragão laraja e de barriga cor de creme olhando o horizonte. <br>
+           Aparentemente ele também é carteiro visto pela sua bolsa que está segurando, <br> 
+           pronto para fazer seu trabalho como um bom pokémon. </p> <!-- Texto -->
+
+           <p style="font-family: Arial, Helvetica, sans-serif">
+            Outro texto para testar, que estará preto por que não havia chamado nenhuma classe.</p>
+           </div>
+           
+           <div class="imagemDragonite">
+        <img class="imgR" src="assets/img/dragonite.jpg" alt="Dragonite"> <!-- Imagem onde o 'alt' fica como o nome
+                                         dela | Crtl Espaço pra pegar algo entre as aspas do 'src' -->
+           </div>
+        </div>
+</body>
+</html>
