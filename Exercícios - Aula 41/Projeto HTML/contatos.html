@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Contatos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <h2>Menu</h2>
-    <ul>
-        <!-- Lista não-ordenada | <ol> é ordenada por números -->
-        <a href="index.html"> <!--Caminho de link-->
-            <li>Home</li>
-        </a>
-    
-        <a href="skate.html">
-            <li>Vídeo Fofolete</li> <!-- Linha da lista -->
-        </a>
-    </ul>
+<body style="background-color: #fccc84">
+    <nav> <!-- Menuzinho -->
+        <div>
+            <img class="nav" src="assets/img/Dragonite circular icon.png" alt="Dragaozin" width="40px"
+            style="margin:5px">
+        </div>
+        <div class="divMargem">
+            <h2>Menu</h2>
+        </div>
+        <ul> <!-- Lista não-ordenada | <ol> é ordenada por números -->
+            
+            <a href="index.html"> <!--Caminho de link-->
+                <li>Home</li>
+            </a>
 
-    <h2>Contatos</h2>
-    <ul>
+            <a href="skate.html">
+                <li>Vìdeo Fofolete</li> <!-- Linha da lista -->
+            </a>
+        </ul>
+    </nav>
+
+    <h2>MEUS CONTATOS </h2>
+    <ul class="liF5">
         <a href="https://github.com/RafaelBalbino"> <!--Caminho de link-->
             <li>Meu Github</li>
         </a>
@@ -30,27 +39,34 @@
         </a>
     </ul>
 
-    <h2>Onde estudei e me formei como técnico de informática:</h2>
-    <p>ETEC Jorge Street</p>
-    <p>São Caetano do Sul - SP</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.0582692745243!2d-46.58020948502089!3d-23.63808418464485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cb6c8a3d8f1%3A0x6069569c3c0cc6c0!2sEscola%20T%C3%A9cnica%20Estadual%20-%20ETEC%20Jorge%20Street!5e0!3m2!1spt-BR!2sbr!4v1653015846331!5m2!1spt-BR!2sbr" 
-    width="550" height="375" style="border:0;" allowfullscreen="" 
-    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="divCenter">
+        <h2>Onde estudei e me formei como técnico de informática:</h2>
+        <p>ETEC Jorge Street</p>
+        <p>São Caetano do Sul - SP</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.0582692745243!2d-46.58020948502089!3d-23.63808418464485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cb6c8a3d8f1%3A0x6069569c3c0cc6c0!2sEscola%20T%C3%A9cnica%20Estadual%20-%20ETEC%20Jorge%20Street!5e0!3m2!1spt-BR!2sbr!4v1653015846331!5m2!1spt-BR!2sbr" 
+        width="550" height="375" style="border:0;" allowfullscreen="" 
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     
-    <h2>Quer me contatar? Só inserir seus dados então!</h2>
-    <form>
-        <label for="nome">Nome:</label> <br>
-        <input type="text" id="nome"> <!-- O for é para o input referenciar a label 'nome' -->
-        <br><br>
-        <label for="email">E-mail:</label> <br>
-        <input type="email" id="email"> <!-- Já verifica se é e-mail válido ou não-->
-        <br><br>
-        <label for="assunto">Assunto:</label> <br>
-        <textarea name="assunto" id="assunto" cols="30" rows="5"></textarea>
-        <br>
-        <p>Clique abaixo para (não)enviar o formulário</p>
-        <button>Enviar</button>
-    </form>
+    <div class="divCenter">
+        <h2>Quer me contatar? Só inserir seus dados então!</h2>
+           <form class="fontSize">
+            <label for="nome">Nome:</label> <br>
+            <input type="text" id="nome"> <!-- O for é para o input referenciar a label 'nome' -->
+            <br> <br>
+            <label for="email">E-mail:</label> <br>
+            <input type="email" id="email"> <!-- Já verifica se é e-mail válido ou não-->
+            <br> <br>
+            <label for="assunto">Assunto:</label> <br>
+            <textarea name="assunto" id="assunto" cols="50" rows="10"></textarea>
+            <p>Clique abaixo para enviar o formulário (confia)</p>
+            <div class="divCenter">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <input style="font-style:italic" type="button" value="ENVIAR">
+                </a>
+            </div>
+           </form>
+    </div>
 </body>
 </body>
 </html>

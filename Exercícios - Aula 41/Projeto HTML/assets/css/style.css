@@ -16,6 +16,11 @@ h1{
     margin: 0%;
 }
 
+.divCenter{
+    justify-content: center;
+    text-align: center;
+}
+
 h2{
     text-align: center;
 }
@@ -54,11 +59,19 @@ a{
     color: chocolate;
     margin-left: 20px;
 }
+
 /* list-style 'none' tira as configurações padrão, tirando as bolinhas */
 ul{
     text-align: center;
     display: flex;
     list-style: none;
+}
+.fontSize{
+    font-size: 20px;
+}
+
+.divMargem{
+    margin-left: 10px;
 }
 
 .liF5{
