@@ -28,7 +28,7 @@ h2{
 /* Configurando o texto falando do Dragonite carteiro */
 .text{
     color: rgb(255, 115, 0);
-    font-size: 14;
+    font-size: 15;
 }
 
 /* Configurando o id do primeiro teste apenas.
@@ -55,6 +55,7 @@ nav{
 .ouca{
     text-align: center;
 }
+
 a{
     color: chocolate;
     margin-left: 20px;

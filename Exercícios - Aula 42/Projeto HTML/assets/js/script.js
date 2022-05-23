@@ -13,16 +13,15 @@
 var nome = window.document.getElementById("nome")
 
 var nomeOk = false
-/* 'boolean' que começa sem nada(false) e/ou inválido */
+/* 'boolean' que começa sem nada(false) e/ou inválido. */
 
-/* Primeira validação fofolete */
+/* Primeira validação fofolete que é se colocou o nome certo ou não. */
 function validarNome() {
     let txtNome = document.querySelector("#txtNome")
 
     if(nome.value.length < 2) {
         /* 'innerHTML' transforma uma tag em texto, neste caso, a 'div' */
         txtNome.innerHTML = "Nome inválido!"
-        
         txtNome.style.color = 'red'
         nomeOk = false
     }
