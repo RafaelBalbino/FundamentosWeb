@@ -9,34 +9,13 @@
      margin: 0%;
  }
 
-/* Configurando o título */
-h1{
-    text-align: center;
-    color: brown;
-    margin: 0%;
-}
-
-.divCenter{
+ .divCenter{
     justify-content: center;
     text-align: center;
 }
 
-h2{
-    text-align: center;
-}
-
-/* Configurando o texto falando do Dragonite carteiro */
-.text{
-    color: rgb(255, 115, 0);
-    font-size: 15;
-}
-
-/* Configurando o id do primeiro teste apenas.
- * Boas práticas é usar o 'id' apenas uma vez, já que geralmente vão
- * achar que é só em um lugar que você está mudando. 
- * Geralmente usamos 'classes' ao invés de 'id' */
-#idteste{
-    font-family: Arial, Helvetica, sans-serif;
+.divMargem{
+    margin-left: 10px;
 }
 
 nav{
@@ -46,6 +25,35 @@ nav{
     margin: 0%; /* Distância fora da estrutura do código, de um conteúdo pra outro */
     padding: 0px; /* Distância dentro da estrutura do código, de uma tag da outra */
     background-color: burlywood;
+}
+
+/* Configurando o id do primeiro teste apenas.
+ * Boas práticas é usar o 'id' apenas uma vez, já que geralmente vão
+ * achar que é só em um lugar que você está mudando. 
+ * Geralmente usamos 'classes' ao invés de 'id' */
+ #idteste{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Configurando o título */
+h1{
+    text-align: center;
+    color: brown;
+    margin: 0%;
+}
+
+h2{
+    text-align: center;
+}
+
+.h2Index{
+    color: black;
+}
+
+/* Configurando o texto falando do Dragonite carteiro */
+.text{
+    color: rgb(255, 115, 0);
+    font-size: 15;
 }
 
 .textmenu:hover{
@@ -72,10 +80,6 @@ ul{
     font-size: 20px;
 }
 
-.divMargem{
-    margin-left: 10px;
-}
-
 .liF5{
     display: flex;
     justify-content: center;
@@ -91,11 +95,13 @@ ul{
     border-radius: 30%;
 }
 
+.imagemDragoniteNervouser{
+    justify-content: center;
+    align-items: center;
+}
+
 .imgR{
     width: 100%;
-}
-.h2Index{
-    color: black;
 }
 
 .video{

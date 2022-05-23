@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 <body style="background-color: #fccc84">
     <nav> <!-- Menuzinho -->
         <div>
-            <img class="nav" src="assets/img/Dragonite circular icon.png" alt="Dragaozin" width="50px"
+            <img class="nav" src="assets/img/Dragonite circular icon.png" alt="Dragaozin" width="60px"
             style="margin:5px">
         </div>
         <div class="divMargem">
@@ -56,9 +56,10 @@
         <h2>Quer entrar em contato de outra forma? Então insira seus dados abaixo!</h2>
            <form class="fontSize">
             <label for="nome">Nome:</label> <br>
+
             <!-- Chamando o evento 'onkeyup' que é a função criada em 'script.js' -->
             <input type="text" id="nome" value="" onkeyup="validarNome()"  
-            placeholder ="Nomezin dazora"> 
+            placeholder ="Seu nome aqui"> 
             <!-- O for é para o input referenciar a label 'nome' -->
 
             <div id="txtNome"></div>
@@ -66,27 +67,36 @@
 
             <br>
             <label for="email">E-mail:</label> <br>
-            <input type="email" id="email" value="" placeholder="email@email.com"> 
+            <input type="email" id="email" value="" placeholder="email@email.com" onkeyup="validarEmail()"> 
             <!-- Já verifica se é e-mail válido ou não-->
 
-            <div>
-
-            </div>
+            <div id="txtEmail"></div>
             <br>
 
             <label for="assunto">Assunto:</label> <br>
             <textarea name="assunto" id="assunto" cols="50" rows="10"></textarea>
             <p class="fontSize">Clique abaixo para enviar o formulário (confia)</p>
+
             <div class="divCenter">
                 <input style="font-style:italic" type="button" onclick="enviar()" value="ENVIAR">
             </div>
            </form>
     </div>
-    <div class="nav">
-        <footer style="background-color: burlywood ; font-family:'Courier New', Courier, monospace">
-        <h2 style="color:brown">Página feita por Rafael Ballabinute Balbino</h2></footer>
-    </div>
-   
+    <hr>
+     <footer style="font-family:'Courier New', Courier, monospace">
+        <nav class="nav">
+            <h2 style="background-color: burlywood; color: brown">
+                Página feita por Rafael Ballabinute Balbino™
+            </h2>
+            
+            <div>
+                <a href = "https://www.linkedin.com/in/rafael-ballabinute-balbino">
+                  <img height="60px" src="assets/img/logo linkedin.jpg">
+                </a>
+            </div>
+        </nav>
+     </footer>
+
     <!-- Tem que chamar o arquivo externo 'script.js' no final do código -->
     <script src="assets/js/script.js"></script>
 </body>

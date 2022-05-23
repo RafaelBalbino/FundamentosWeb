@@ -15,6 +15,9 @@ var nome = window.document.getElementById("nome")
 var nomeOk = false
 /* 'boolean' que começa sem nada(false) e/ou inválido. */
 
+var email = window.document.querySelector("#email")
+var emailOk = false
+
 /* Primeira validação fofolete que é se colocou o nome certo ou não. */
 function validarNome() {
     let txtNome = document.querySelector("#txtNome")
@@ -32,13 +35,36 @@ function validarNome() {
     }
 }
 
+/* Validando o e-mail inserido pelo usuário através de caracteres inseridos. */
+function validarEmail() {
+    let txtEmail = document.querySelector("#txtEmail")
+
+    if(email.value.length < 7) {
+        txtEmail.innerHTML = "E-mail inválido!"
+        txtEmail.style.color = 'red'
+        emailOk = false
+    }
+    else {
+        txtEmail.innerHTML = "E-mail fofolete!"
+        txtEmail.style.color = 'green'
+        emailOk = true
+    }
+}
+
 /* Validando a função acima pra mandar um alerta se não houver nome ou for inválido */
 function enviar() {
-    if(nomeOk == true) {
+    if(nomeOk == true && emailOk == true) {
         alert("CAIU NO CONTO!")
         window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     }
-    else {
+    else if(nomeOk == false && emailOk == true){
         alert("Mensagem não enviada! Preencha o seu nome corretamente antes!")
     }
+    else if(nomeOk == true && emailOk == false) {
+        alert("Mensagem não enviada! Preencha o seu e-mail corretamente antes!")
+    }
+    else {
+        alert("Mensagem não enviada! Preencha o seu nome e e-mail corretamente antes!")
+    }
 }
+
