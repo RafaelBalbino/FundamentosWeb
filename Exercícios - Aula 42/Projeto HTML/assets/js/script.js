@@ -2,24 +2,38 @@
  * Variáveis são fracamente tipadas
  * var = Variável global, usada em várias funções e classes
  * let = Variável interna, chamada dentro de uma função/classe
- * caseInsensitive por que não importa se é maiúscula a letra ou não*/
+ * Case Sensitive = reconhece letras maiusculas e minusculas
+ * por Tag: getElementByTagName()
+ * por Id: getElementById()
+ * por Nome: getElementsByName()
+ * por Classe: getElementsByClassName()
+ * por Seletor: querySelector() 
+ * ` ` ao invés de " " quando tiver que quebrar um texto pra formatar o código bem 
+ fofolete se estiver trabalhando com 'String'
+*/
 
 /* 'window.document.querySelector(#nome)' é outra forma de fazer a variável abaixo,
- * chamando algo qualquer (classe, id ou outro atributo), mais usada;
- * 'window' não é necessário para a síntaxe desta função. */
+ * chamando algo qualquer (classe, id ou outro atributo), mais usada.
+ * 'window' não é necessário para a síntaxe desta função. 
+*/
 
 /* Usando essa variável para manipular o input de 'nome' */
 
 var nome = window.document.getElementById("nome")
+nome.style.width = '380px'
 
 var nomeOk = false
 /* 'boolean' que começa sem nada(false) e/ou inválido. */
 
 var email = window.document.querySelector("#email")
+email.style.width = '380px'
+
 var emailOk = false
 
 var assunto = window.document.querySelector("#assunto")
 var assuntoOk = false
+
+var mapa = document.querySelector("#mapa")
 
 /* Primeira validação fofolete que é se colocou o nome certo ou não. */
 function validarNome() {
@@ -36,8 +50,8 @@ function validarNome() {
         txtNome.style.color = 'green'
         nomeOk = true
     }
-    else if(nome.value.length == 0){
-        txtNome.innerHTML = ""
+    else if(nome.value.length < 1){
+        txtNome.innerHTML = "Insira algo"
         nomeOk = false
     }
 }
@@ -46,30 +60,45 @@ function validarNome() {
 function validarEmail() {
     let txtEmail = document.querySelector("#txtEmail")
 
-    if(email.value.length < 8) {
+    if(email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
         txtEmail.innerHTML = "E-mail inválido!"
         txtEmail.style.color = 'red'
         emailOk = false
     }
-    else if(email.value.length >= 8){
+    else if (email.value.length < 1){
+        txtEmail.innerHTML = "Insira algo"
+        emailOk = false
+    }
+    else {
         txtEmail.innerHTML = "E-mail fofolete!"
         txtEmail.style.color = 'green'
         emailOk = true
     }
-    else if (email.value.length == 0){
-        txtEmail.innerHTML = ""
-        emailOk = false
-    }
+    
 }
 
 function validarAssunto() {
-    let txtAssunto = document.querySelector("#assunto")
+    let txtAssunto = document.querySelector("#txtAssunto")
 
     if(assunto.value.length <= 4) {
+        txtAssunto.innerHTML = "Detalha mais esse assunto aí (Min 4 caracteres)!"
+        txtAssunto.style.color = 'red'
         assuntoOk = false
     }
-    else {
+    else if(assunto.value.length >= 5 && assunto.value.length < 100){
+        txtAssunto.innerHTML = "Esse assunto é importante!"
+        txtAssunto.style.color = 'green'
         assuntoOk = true
+    }
+    else if(assunto.value.length >= 100){
+        txtAssunto.innerHTML = `Tá me escrevendo um livro? Detalha menos isso daí! 
+                                                              (Max 100 caracteres)`
+        txtAssunto.style.color = 'yellow'
+        assuntoOk = false
+    }
+    else if(assunto.value.length < 1) {
+        txtAssunto.innerHTML = "Insira algo"
+        assuntoOk = false
     }
 }
 
@@ -102,3 +131,13 @@ function enviar() {
         alert("Mensagem não enviada! Preencha seu e-mail e nome corretamente e detalha esse assunto aí!")
     }
 }
+
+function mapaZoom() {
+    mapa.style.width  = '800px'
+    mapa.style.height = '600px'
+ }
+ 
+ function mapaNormal() {
+    mapa.style.width  = '575px'
+    mapa.style.height = '475px'
+ }
