@@ -16,7 +16,7 @@
         <div class="divMargem">
             <h2>Menu</h2>
         </div>
-        <ul> <!-- Lista não-ordenada | <ol> é ordenada por números -->
+        <ul class="fontSize"> <!-- Lista não-ordenada | <ol> é ordenada por números -->
             
             <a class="textmenu" href="index.html"> <!--Caminho de link-->
                 <li>Home</li>
@@ -29,7 +29,7 @@
     </nav>
 
     <h2>FORMAS DE CONTATO</h2>
-    <div class="divCenter">
+    <div class="divCenter fontSize">
         <a class="textmenu" href="https://github.com/RafaelBalbino"> <!--Caminho de link-->
         Meu Github
         </a>
@@ -74,8 +74,11 @@
             <br>
 
             <label for="assunto">Assunto:</label> <br>
-            <textarea name="assunto" id="assunto" cols="50" rows="10"></textarea>
+            <textarea name="assunto" id="assunto" cols="50" rows="10" onkeyup="validarAssunto()" 
+             style="color:black"></textarea>
             <p class="fontSize">Clique abaixo para enviar o formulário (confia)</p>
+
+            <div id="txtAssunto"></div>
 
             <div class="divCenter">
                 <input style="font-style:italic" type="button" onclick="enviar()" value="ENVIAR">
