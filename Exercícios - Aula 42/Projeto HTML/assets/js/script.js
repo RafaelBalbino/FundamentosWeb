@@ -81,7 +81,7 @@ function validarAssunto() {
     let txtAssunto = document.querySelector("#txtAssunto")
 
     if(assunto.value.length <= 4) {
-        txtAssunto.innerHTML = "Detalha mais esse assunto aí (Min 4 caracteres)!"
+        txtAssunto.innerHTML = "Detalha mais esse assunto aí (Min 5 caracteres)!"
         txtAssunto.style.color = 'red'
         assuntoOk = false
     }
@@ -93,7 +93,7 @@ function validarAssunto() {
     else if(assunto.value.length >= 100){
         txtAssunto.innerHTML = `Tá me escrevendo um livro? Detalha menos isso daí! 
                                                               (Max 100 caracteres)`
-        txtAssunto.style.color = 'yellow'
+        txtAssunto.style.color = 'orange'
         assuntoOk = false
     }
     else if(assunto.value.length < 1) {
