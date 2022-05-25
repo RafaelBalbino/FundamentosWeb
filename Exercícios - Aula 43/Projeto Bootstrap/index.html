@@ -125,30 +125,32 @@
   </div>
 </div>
 
-<hr>
-
 <!-- Form -->
-<div class="container-fluid" style="margin-top: 10px">
+<div class="container-fluid" style="margin-top: 15px">
   <div class="row">
     <div class="col-2">
     </div>
     <div class="col-8">
       <form>
-        <div class="form-group">
+        <div class="form-group divCenter">
           <label for="email" class="fontBold">E-mail:</label>
           <input type="email" class="form-control" id="email" 
-          aria-describedby="emailHelp">
+          aria-describedby="emailHelp" placeholder="name@example.com" onkeyup="validarEmail()">
         </div>
-        <div class="form-group">
-          <label for="password" class="fontBold">Senha:</label>
-          <input type="password" class="form-control" id="password">
+        <div id="txtEmail"></div>
+        <div class="form-group divCenter">
+          <label for="nome" class="fontBold">Nome:</label>
+          <input type="nome" class="form-control" id="nome" placeholder="Seu nome aqui"
+          onkeyup="validarNome()">
         </div>
+        <div id="txtNome"></div>
         <div class="form-group">
           <label for="assunto" class="fontBold">Assunto:</label>
-          <textarea class="form-control" id="assunto" rows="4"></textarea>
+          <textarea class="form-control" id="assunto" rows="4" onkeyup="validarAssunto()"></textarea>
         </div>
         <div id="txtAssunto"></div>
-      <button type="submit" class="btn btn-primary" style="margin-left: 50%">Enviar</button>
+      <button type="submit" class="btn btn-primary" style="margin-left: 45%"
+      onclick="enviar()">Enviar</button>
       </form>
     </div>
     <div class="col-2">
@@ -156,6 +158,31 @@
   </div>
 </div>
 <!-- Form -->
+
+<hr>
+
+<!-- Vídeo -->
+<div class="container-fluid" style="margin-top:10px">
+  <div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+      <p style="font-size: 20px; text-align: center;">DRAGONITE VS MEGA LUCARIO</p>
+      <div class="video">
+      <iframe width="650" 
+      height="380" 
+      src="https://www.youtube.com/embed/g-6znrdGm7Q" 
+      title="Vídeo do Dragonite" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+<!-- Vídeo -->
 
 <hr>
 
@@ -177,7 +204,36 @@
 </div>
 <!-- Card -->
 
- <!-- Javascript utilizado pelo Bootstrap e seus links 'npm'-->
+<hr>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-danger bgO text-muted fontBold">
+  <!-- Section: Social media -->
+  <footer class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>PÁGINA CRIADA POR RAFAEL BALLABINUTE BALBINO - CONTATOS:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div class="fontBold">
+      <a href="https://www.linkedin.com/in/rafael-ballabinute-balbino" class="me-4 text-reset">
+        <i class="fab fa-linkedin">
+          <img src="assets/img/logo linkedin.jpg" alt="Logo Linkedin" width="130px" height="45px">
+        </i>
+      </a>
+      <a href="https://github.com/RafaelBalbino" class="me-4 text-reset">
+        <i class="fab fa-github">
+          <img src="assets/img/github logo.png" alt="Logo Github" width="125px">
+        </i>
+      </a>
+    </div>
+ </footer>
+<!-- Footer -->
+
+<!-- Javascript utilizado pelo Bootstrap e seus links 'npm'-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous">
@@ -190,7 +246,8 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous">
     </script>
-  <!-- Javascript utilizado pelo Bootstrap e seus links 'npm'-->
-  <script src="assets/js/script.js"></script>
+<!-- Javascript utilizado pelo Bootstrap e seus links 'npm'-->
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>

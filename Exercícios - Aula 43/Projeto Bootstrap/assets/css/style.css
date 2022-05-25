@@ -21,3 +21,8 @@ body{
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
 }
+
+.video{
+    display: flex;
+    justify-content: center; /* Pega a caixinha de vídeo inteiro, e coloca pro centro */
+}
